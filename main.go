@@ -39,6 +39,7 @@ func deleteMovie(writer http.ResponseWriter, request *http.Request) {
 			break
 		}
 	}
+	json.NewEncoder(writer).Encode(movies)
 }
 
 func getMovie(writer http.ResponseWriter, request *http.Request) {
